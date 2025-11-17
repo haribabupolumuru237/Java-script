@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* //1.  Identify Data Types
+        // Create variables of each type and print their typeof.
+        let name = "hari babu";
+        let age = 26;
+        let passed = true;
+        let nothing;
+        let emptything = null;
+        let big = 200n;
+        let joke = Symbol("comedy");
+        let student = {
+            name: "hari babu",
+            age: 26,
+            address: "kotturu",
+        };
+        let fruits = ["banana", "mango", "orenge", "apple"];
+
+        console.log(name);
+        console.log(typeof name);
+        console.log(age);
+        console.log(typeof age);
+        console.log(passed);
+        console.log(typeof passed);
+        console.log(nothing);
+        console.log(typeof nothing);
+        console.log(emptything);
+        console.log(typeof emptything);
+        console.log(big);
+        console.log(typeof big);
+        console.log(joke);
+        console.log(typeof joke);
+        console.log(student);
+        console.log(typeof student);
+        console.log(fruits);
+        console.log(typeof fruits); */
+
+        /*
+        // 2.   Convert Number to String
+
+        let num = 100;
+        let numstr = String(num);
+        console.log(numstr);
+        console.log(typeof numstr);
+
+        let ages = 26;
+        let agesstr = ages.toString();
+
+        console.log(agesstr);
+        console.log(typeof agesstr); */
+
+        /* let normal = "100";
+        let normalnum = Number(normal);
+        console.log(normalnum);
+        console.log(typeof normalnum);
+
+        let Decimal = "45.75";
+        let decimalnum = Number(Decimal);
+        console.log(decimalnum);
+        console.log(typeof decimalnum);
+
+        let negitive = "-250";
+        let negitivenum = Number(negitive);
+        console.log(negitivenum);
+        console.log(typeof negitivenum);
+
+        let space = "   500   ";
+        let spacenum = Number(space);
+        console.log(spacenum);
+        console.log(typeof spacenum);
+
+        let empty = "";
+        let emptynum = Number(empty); // result = 0
+        console.log(emptynum);
+        console.log(typeof emptynum);
+
+        let Boolean = "true";
+        let Booleannum = Number(Boolean); // NaN
+        console.log(Booleannum);
+        console.log(typeof Booleannum);
+
+        let text = "123abc";
+        let textnumber = parseInt(text);
+        console.log(textnumber);
+        console.log(typeof textnumber);
+
+        let decimal = "99.99kg";
+        let decimaltext = parseFloat(decimal);
+        console.log(decimaltext);
+        console.log(typeof decimaltext); */
+
+        /*
+        // 3. Boolean Conversion
+        // Convert:
+        // 0
+        // 1
+        // ""
+        // "hello"
+        // null
+        // undefined
+        // into boolean values.
+
+        console.log(Boolean(0)); // false
+        console.log(Boolean(1)); // true
+        console.log(Boolean("")); // false
+        console.log(Boolean("hello")); // true
+        console.log(Boolean(null)); // false
+        console.log(Boolean(undefined)); // false */
+
+        /*
+        //   4. Count Characters in String
+        let name = "haribabu";
+        console.log(name.length); */
+
+        /* // 5. Convert Boolean to String and Number
+        // Convert Boolean to String
+        let a = true;
+        let b = false;
+
+        let str1 = String(a);
+        let str2 = String(b);
+
+        console.log(str1);
+        console.log(str2);
+        console.log(typeof str1);
+        console.log(typeof str2);
+        // Convert Boolean to Number
+        let bool1 = true;
+        let bool2 = false;
+
+        let string1 = Number(bool1);
+        let string2 = Number(bool2);
+
+        console.log(string1);
+        console.log(string2);
+        console.log(typeof string1);
+        console.log(typeof string2); */
+
+        /* //6.   Array → String Conversion
+        //   Use .join()
+        let fruits = ["banana", "apple", "mango"];
+        //let veg = fruits.toString()
+        let veg = String(fruits);
+        console.log(veg);
+        console.log(typeof veg);
+
+        let numbers = [10, 20, 30, 40];
+        console.log(numbers);
+        let result = numbers.join();
+        console.log(result); */
+
+
+        /* //7. string to array conversion
+        let student = "hello my dear frind"
+        let remark = student.split(" ")
+        console.log(remark)
+
+        let str = "HARIBABU"
+        let arr = str.split("")
+        console.log(arr) */
+
+        // 8. Deep Object Access
+
+        // Extract nested value:
+
+        // let user = {
+        // info: {
+        // address: {
+        // city: "Hyderabad"
+        //        }
+        //     }
+        // };
+        // Get "Hyderabad"
+        let user = {
+            info: {
+                address: {
+                    city: "Hyderabad"
+                }
+            }
+        };
+
+        console.log(user.info.address.city)
+
+
+        // 9.  What is the output of the script?
+
+        //   let name = "Hari babu";
+
+        //   alert( `hello ${1}` ); // ?
+
+        //   alert( `hello ${"name"}` ); // ?
+
+        //   alert( `hello ${name}` ); // ?
+
+        let name = "haribabu"
+        alert(`hello ${1}`); //hello1
+        alert(`hello ${"name"}`);//helloname
+        alert(`hello ${name}`);//hello haribabu
+
+
+    </script>
+</body>
+
+</html>
