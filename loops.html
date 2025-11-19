@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // loops(for, while, do...while, for...in)
+
+      /* 
+      //1. Print numbers from 1 to 10
+
+      for (let num = 1; num <= 10; num++) {
+        document.write("print numbers:" + num + "<br>");
+      } */
+
+      /* //2. Write a program using for loop to print only even numbers from 1 to 20.
+
+      for(var b = 1;b <= 20;b++){
+        if(b % 2 === 0){
+            document.write(b)
+        }
+      }
+
+      for( let num = 2; num<= 20 ; num +=2){
+        document.write(num)
+      } */
+
+      /* 
+      //3.Sum of first 10 natural numbers
+
+      let sum = 0 
+      for(let i = 1; i <= 10 ; i++){
+        sum+=i
+      }
+      document.write(sum) */
+
+      /* //4. Print a table of any number (like 5)
+
+      let num = 5
+
+      for(i=1;i<=15;i++){
+        document.write(num +"x"+i+ "="+(num*i)+ "<br>")
+      } */
+
+      /* //5. Print squares of numbers from 1 to 10
+      for(let i = 1; i<=20;i++){
+        document.write(i + "square" + i*i + "<br>")
+      } */
+
+      /* 
+      //6. Print the characters of a string using a for loop
+
+      let name = "HARIBABU"
+      for(i=0; i<name.length;i++){
+        document.write(name[i] + "<br>")
+      } */
+
+      //while loop
+
+      /* 
+      //1. Use a while loop to print numbers from 10 down to 1.
+
+      let num = 10
+      while(num >=1){
+        document.write(num  + "<br>")
+        num--
+      } */
+
+      /* 
+      //2.Print multiples of 3 up to 30
+
+      let i = 3
+      while(i<=30){
+        document.write(i + "<br>")
+        i+=3
+      } */
+
+    
+      /* 
+      //3. Print all multiples of 7 up to 70
+
+      let i = 7
+      while(i<= 70){
+        document.write(i)
+        i+=7
+      } */
+
+      /* 
+      //   do while
+
+      //1. Keep asking “Do you want to continue?” until user types “no”
+
+      let answer = prompt("do you want to continue?")
+      while(answer !== "no"){
+      answer = prompt("Do you want to continue?")
+      }
+      document.write("you close to stop")  */
+
+      /* 
+      //2.Print all multiples of 3 up to 30
+
+      let i = 3
+      do{
+        document.write(i)
+        i+=3
+      }while(i<=30) */
+
+      /* 
+      //3. Keep asking the user for a positive number
+
+      let num
+      do{
+        num = Number(prompt("enter a positive number"))
+      }while(num<0){
+        document.write(num)
+      } */
+
+      //for...in
+      
+      /* 
+      //1.Print all properties of an object
+
+      let person = {
+        name: "haribabu",
+        age: 26,
+        address:"kotturu,srikakulam",
+      }
+      for(let key in person){
+        document.write(key + "<br>")
+      } */ 
+
+      /* 
+      //2.Print all values of an object
+
+      let person = {
+        name: "hari",
+        age: 26,
+        address:"srikakulaam",
+      }
+
+      for(let key in person){
+        document.write(person[key])
+      } */
+
+      /* 
+      //3.Print keys and values of an object 
+
+      let person = {
+        name: "giri",
+        age: 25, 
+        city: "Mumbai"};
+      for (let key in person) {
+        document.write(key + " : " + person[key] + "<br>");
+      } */
+
+      /* 
+      //4.Print indexes of an array
+
+      let colour = ["red","green","blue"]
+      for(let index in colour){
+        document.write(index)
+      } */
+
+      //5. Sum values in an object
+
+      let scores ={
+        maths:80,
+        english:70,
+        science:90
+      }
+      let sum = 0
+      for(let subject in scores){
+       sum += scores[subject]
+      }
+      document.write(sum)
+
+
+    </script>
+  </body>
+</html>
