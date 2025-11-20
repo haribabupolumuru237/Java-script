@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //function basic:
+        /* 
+        //1. Create a function that prints “Hello World”.
+        
+        function name(){
+            document.write("polumuru haribabu")
+            
+        }
+        name()
+        name() */
+        /* 
+        //.2 Make a function that takes a name and prints “Hello, name”.
+
+        function student(name){
+            document.write("hello" + name)
+        }
+        student("haribabu" + "<br>")
+        student("giribabu" + "<br>") */
+        
+        /* 
+        //3. Write a function that adds two numbers and returns the result.
+
+        function number(a,b){
+            return a + b
+        }
+        let result = number(25,56)
+        document.write(result) */
+        
+        /* 
+        //4. Write a function that multiplies two numbers and prints the result.
+
+        function multy (x,y){
+            return x * y
+        }
+        document.write(multy(40,22)) */
+
+        /* 
+        //5.Create a function that takes age and returns “Adult” or “Child”
+
+        function checkage(age){
+            if(age >= 18){
+                return "adult"
+            }else{
+                return "child"
+            }
+        }
+        document.write(checkage(40))
+        document.write(checkage(16))
+        document.write(checkage(12)) */
+
+        /* 
+        //6. Function that subtracts two numbers and returns result
+
+        function sub (a, b){
+            return a - b
+        }
+        document.write(sub(25,15)) */
+
+        /* 
+        //7. Function that divides two numbers and prints the result
+
+        function divid(a,b){
+            document.write(a/b)
+        }
+        divid(20 ,5) */
+
+        // Types of Functions:
+        // 1.function declaration
+
+        /* 
+        //1.Create a function greet() that prints “Good Morning”.
+
+        function greet(){
+            document.write("good morning")
+        }
+        greet() */
+
+        /* 
+        //2.Create a function welcome() that prints "Welcome to JavaScript!".
+
+        function welcome(){
+            let java = "welcome to javascript"
+            document.write(java)
+        }
+        welcome() */
+
+        // 2.function expression
+
+        /* 
+        //1.Create a function expression that returns the square of a number
+        
+        const square = function(num){
+            return num*num
+        }
+        document.write(square(26)) */
+
+        /* 
+        //2. create a function expression that Using Math.pow()
+
+        let value = function (num){
+            return Math.pow(num,4)
+        }
+        document.write(value(6)) */
+
+        // 3.arrow function
+
+        /* 
+        //1. Write an arrow function that returns the cube of a number.
+
+        const cube = (n) =>{
+        return n * n * n
+        }
+        document.write(cube(4))
+        
+        // const cube = (n) => n*n*n
+        // document.write(cube(5))*/
+        
+
+        /* 
+        //2.Write an arrow function that returns the cube of a number.
+
+        let square = (n) => n*n
+        document.write(square) */
+
+        /* 
+        //3.Arrow function that returns Good Night
+
+        let wish = () => "good morning"
+        document.write(wish()) */
+
+        /* 
+        //4. Arrow function that multiplies two numbers
+
+        let multi = (x,y) => x * y
+        document.write(multi(4,20)) */
+
+        //4.Anonymous function
+
+        /* 
+        //1. Use an anonymous function inside setTimeout to print “Done”.
+        setTimeout(function(){
+            document.write("done")
+        }, 4000 ) */
+
+        /* 
+        //2.Anonymous function used in setInterval
+
+        setInterval(function(){
+            document.write("good morning...")
+        },2000) */
+
+        //3. Parameters & Arguments:
+
+        /* 
+        //1.Create a function that takes 3 numbers and returns the biggest.
+
+        function biggest(a,b,c){         //parameters
+            return Math.max(a,b,c)
+        }
+        document.write(biggest(20,55,30))   //arguments */
+
+        /* 
+        //2. Make a function that takes a message and prints it.
+
+        function printmsg(message){
+            document.write(message)
+        }
+        printmsg("hello world") */
+
+        /* 
+        //3.Create a function with default parameter
+
+        function greet(name,country = "india"){
+            document.write(`hello${name} from ${country}`)
+        }
+        greet("haribabu" )
+        greet ("giribabu") */
+
+
+        // 4.scope(function, block, global):
+        /* 
+        //1. Create a global variable and print it inside a function.
+
+        let name = "hari babu"
+        function student (){
+            document.write(name)
+        }
+        student() */
+
+        /* 
+        //2. Create a function variable and try to print it outside (should error).
+
+        function name(){
+            let student = "haribabu"
+            document.write(student)  //ok
+        }
+        name()
+        document.write(student)      //error inde not allowed */
+
+        /* 
+        //3.Create a block scope variable using let and check visibility.
+
+        {
+            let person = "rama krishna"
+            document.write(person)
+        }
+            document.write(person)  //block scope work in only inside. */
+
+        
+        //5. Function Methods (call, apply, bind):
+        
+        /* 
+        //1. Create an object with name; make a function print name using call().
+
+        const person = {
+            name: "haribabu",
+            address: "srikakulam",
+        }
+        function print (){
+            document.write("name is: " + this.name + "<br>" +"address is : " + this.address)
+        }
+        print.call(person) */
+
+        /* 
+        //2. Use apply() to pass an array of numbers to a function
+
+        function add(a,b,c){
+            return a+b+c
+        }
+        const nums = [20, 34, 46]
+        document.write(add.apply(null,nums)) */
+
+        /* 
+        //3. Use bind() to permanently attach a name to a function
+
+        function greet(){
+            document.write("hello "+ this.username)
+        }
+        const user = {
+            username: "hari babu"
+        }
+        const greethari = greet.bind(user)
+        greethari() */
+
+        /* 
+        //4.Create two objects and use call() to reuse one function
+
+        const pers1 = {
+            name: "hari",
+        }
+        const pers2 = {
+            name: "giri",
+        }
+        function hello(){
+            document.write("hi" + this.name)
+        }
+        hello.call(pers1)
+        hello.call(pers2) */
+
+        /* 
+        //5.apply() with Math.min
+        const marks = [55, 12, 89, 32, 99];
+        const min = Math.min.apply(null, marks)
+        document.write("Min:", min) */
+
+        //6.Recursion:
+
+        /* 
+        //1. Recursive function to count 1 to 5.
+        function count(num){
+            if(num>5) return
+            document.write(num)
+            count(num+1)
+        }
+        count(2) */
+
+        /* 
+        //2.Recursive function to sum numbers 1 to n
+        function sum(n){
+            if(n===0)return 0
+            return n+ sum(n-1)
+        }
+        document.write(sum(10)) */
+
+        /* 
+        // 3.Recursive function to calculate factorial
+
+        function sum(n){
+            if(n === 0) return 1
+            return n*sum(n-1)
+        }
+        document.write(sum(5)) */
+
+        /* 
+        //4.Recursive function to print characters of a string
+        
+        function prints(str,index = 0){
+            if(index === str.length)return
+            document.write(str[index])
+            prints(str,index+1)
+        }
+        prints("polumuru hari babu") */
+
+        
+
+
+        
+
+
+
+        
+
+
+        
+
+
+
+    </script>
+</body>
+</html>
