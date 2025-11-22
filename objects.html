@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //object litarals
+
+        /* 
+        //1. Create an object called book with 3 properties: title, author, pages.
+
+        const book = {
+            title: "java script legends",
+            author: "hari",
+            pages: 359,
+            price:250,
+        }
+        console.log(book) */
+
+        /* 
+        //2.Make an object student with name, age, and class. Print the whole object
+
+        const student = {
+            name: "hari babu",
+            age: 16,
+            class: 10,
+        }
+        console.log(student) */
+
+        /* 
+        //3.Create an object car with brand, model, year.
+
+        let car = {
+            brand: "royal lendi",
+            model: "fortuner",
+            year: 2036,
+
+        }
+        console.log(car) */
+
+        /* 
+        //4. Make an object account containing balance and type.
+
+        let account = {
+            balence:10000,
+            type: "current account",
+        }
+        console.log(account)
+        console.log(account.type) */
+
+        /* 
+        //5. Create an object product with name, cost, discount.
+
+        const product = {
+            name: "football",
+            cost: 25000,
+            discount: "20%",
+
+        }
+        console.log(product) */
+
+        // Accessing Properties:
+
+        /* 
+        //1. Create a car object and print its brand using dot notation.
+
+        let car = {
+            brand: "honda",
+            model:"city"
+            
+        }
+        console.log(car.brand) */
+
+        /* 
+        //2.Create a car object and print brand.
+
+        let car = {
+            brand: "toyota",
+            model :"fortuner",
+            year: 2025,
+        }
+        console.log(car.brand) */
+
+        /* 
+        //3.Access age using bracket notation
+
+        const student = {
+            name:"hari babu",
+            age: 26,
+            address:"srikakulam"
+        }
+        console.log(student["age"]) */
+
+        /* 
+        //4. Create a movie object and print rating.
+
+        const movie = {
+            title: "OG",
+            hero: "pawan kalyan",
+            rating:9.5,
+        }
+        console.log(movie["hero"]) */
+
+        /* 
+        //5. Create an object and print any two properties.
+
+        let laptop = {
+            brand:"lenovo",
+            processor:"i5",
+            price: 73000,
+            ram:"16gb",
+        }
+        console.log(laptop.brand)
+        console.log(laptop.processor) */
+
+        //Adding / Modifying / Deleting Properties:
+
+        /* 
+        //1. Add a new property grade to student object.
+
+        let student = {
+            name:"hari babu",
+            age:26,
+            section:"b.com",
+        }
+        student.address = "kotturu,srikakulam"
+        console.log(student) */
+
+        /* 
+        // 2.Modify student's age.
+
+        let student = {
+            name: "haribabu",
+            age:26,
+        }
+        student.age = 27
+        console.log(student) */
+
+        /* 
+        //3.Delete student’s grade property.
+
+        let student = {
+            name:"hari babu",
+            age:26,
+            section:"b.com",
+            grade: "A",
+        }
+        delete student.grade
+        console.log(student) */
+
+        /* 
+        //4.Delete an unwanted property from any object.
+
+        const phone = {
+            brand: "samsung",
+            model :"s.23",
+            price: 58000,
+            colour: "gold",
+        }
+        delete phone.model
+
+        console.log(phone) */
+
+        /* 
+        //5.Modify year of a car object.
+
+        const car = {
+            brand: "honda",
+            model: "city",
+            year: 2024,
+        }
+        car.year = 2020
+        console.log(car) */
+
+        /* 
+        //6.Add stock property to product object.
+
+        const product = {
+            name: "laptop",
+            price:45000,
+            brand: "hp",
+        }
+        product.stock = 20
+        console.log(product) */
+
+        //Nested Objects:
+
+        /* 
+        //1.Create a person object with address inside.
+
+        const person = {
+            name: "hari babu",
+            age: 26,
+            address: {
+                street : "metturu",
+                city: "kotturu",
+                pincode: 532459,
+            }
+        }
+        console.log(person)
+        console.log(person.address.city) */
+
+        /* 
+        //2.Create a student object with marks inside.
+
+        let student = {
+            name: "haribabu",
+            rollno: 26,
+            marks:{
+                english: 45,
+                telugu: 48,
+                maths:50
+            }
+        }
+        console.log(student)
+        console.log(student.marks.maths) */
+
+        /* 
+        //3.Create a laptop object with specifications (RAM, storage).
+
+        const laptop = {
+            brand: "Dell",
+            price: 55000,
+            specifications: {
+                RAM: "16GB",
+                storage: "512GB SSD"
+            }
+        }
+        console.log(laptop)
+        console.log(laptop.specifications.RAM)  */
+
+        /* 
+        //4. Create a company object with employee details inside.
+
+        const company = {
+            name: "Tech Solutions",
+            location: "Hyderabad",
+            employee: {
+                empName: "Suresh",
+                empId: 1023,
+                position: "Software Developer",
+                salary: 45000
+            }
+        }
+        console.log(company)
+        console.log(company.employee.empName) */
+
+        //this Keyword
+
+        /* 
+        //1.Create car object with brand and print it using this. 
+
+        const car = {
+            brand: "Toyota",
+            model: "Fortuner",
+            getBrand: function() {
+                console.log(this.brand)
+            }
+        }
+        car.getBrand() */
+
+        /* 
+        //2.Create student object with marks, print marks using this.
+
+        const student = {
+            name: "Harish",
+            marks: 92,
+            printMarks: function() {
+                console.log(this.marks)
+            }
+        }
+        student.printMarks() */ 
+
+        /* 
+        //3.Create laptop object with model and method showModel().
+
+        const laptop = {
+            brand: "HP",
+            model: "Pavilion x360",
+            showModel: function() {
+                console.log(this.model)
+            }
+        }
+        laptop.showModel() */ 
+
+        //4.Create movie object with rating and method printRating().
+
+        const movie = {
+            title: "KGF 2",
+            rating: 4.8,
+            printRating: function() {
+                console.log(this.rating)
+            }
+        }
+        movie.printRating()
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
