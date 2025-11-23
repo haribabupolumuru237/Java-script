@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //creating arrays:
+        /* 
+        //1.Create an array of 5 colors and print it.
+    
+        const color = ["red", "blue", "green", "orenge",'white']
+        console.log(color) */
+
+        /* 
+        //2.Create an array of 5 numbers and print each number.
+
+        const num = [10,20,30,40,45]
+        for(let i=0;i<num.length;i++){
+            console.log(num[i])
+        } */
+
+        /* 
+        //3.Create an empty array and add 3 items later.
+
+        const things = []
+        things.push("pencil")
+        things.push("pen")
+        things.push("scale")
+        things.push("eraser")
+        console.log(things)  */
+
+        /* 
+        //4.Create an array of 1–10 numbers; print the first and last element.
+
+        let num = [1,2,3,4,5,6,7,8,9,10]
+        console.log("first:" + num[0])
+        console.log("last:" + num[num.length-1]) */
+
+        /* 
+        //5.Create an array of 3 car brands and add a new brand at index 3.
+
+        const car = ["bmw","audi","toyato"]
+        car[3] = "honda"
+        console.log(car) */
+
+        //Array Methods:
+       
+        /* 
+        //1.Create an array and use length to show total items.
+
+        const items = ["apple","banana","orenge"]
+        console.log(items.length) */
+
+        /* 
+        //2. Convert an array to a string using join().
+
+        const color = ["red","green","blue"]
+        const result = color.join(", ")
+        console.log(result) */
+
+        /* 
+        //3.Merge two arrays using concat().
+
+        const num1 = [1, 2, 3]
+        const num2 = [4, 5, 6]
+        const merge = num1.concat(num2)
+        console.log(merge) */
+
+        /* 
+        //4.Check if a value exists using includes().
+
+        let fruits = ["apple","orenge","banana"]
+        console.log(fruits.includes("apple"))
+        console.log(fruits.includes("banana")) */
+
+        /* 
+        //5.Reverse an array using reverse().
+
+        let number = [1,2,3,4,5,6]
+        console.log(number.reverse()) */
+
+        /* 
+        //6.Convert array elements to uppercase using join("").
+
+        let letters = ["a","b","c","d"]
+        console.log(letters.join(" ").toUpperCase()) */
+
+        /* 
+        //7. Find index of a fruit using indexOf().
+
+        const fruits = ["apple","grapes","banana","orenge"]
+        console.log(fruits.indexOf("mango"))
+        console.log(fruits.indexOf("grapes")) */
+
+        /* 
+        //8.swap first and last elements in an array.
+
+        let num = [1,2,3,4,5,6,7,8,9]
+
+        const temp = num[0]
+        num[0] = num[num.length-1]
+        num[num.length-1] = temp
+        console.log(num) */
+
+        /* 
+        //9.Replace an element manually using index
+
+        let fruits = ["apple","grapes","banana"]
+        fruits[2] = "orenge"
+        console.log(fruits) */
+
+        //push, pop, shift, unshift:
+
+        /* 
+        //1.Use push() to add a new fruit.
+
+        const fruits = ["grapes","apple","banana"]
+        fruits.push("potato")   //adding last element
+        console.log(fruits) */
+
+        /* 
+        //2. Use pop() to remove the last number from an array
+
+        const num = [1,2,4,5]
+        num.pop()                  //remove the last element
+        console.log(num) */
+
+        /* 
+        //3.Use shift() to remove the first element.
+
+        const color = ["red","green","blue"]
+        color.shift()       //remove the first element
+        console.log(color) */
+
+        /* 
+        //4.Use unshift() to add an item at the start.
+
+        const fruits = ["banana","apple","orenge"]
+        fruits.unshift("grape")   //adding first elemeent
+        console.log(fruits) */
+
+        /* 
+        //5. Add 3 items using push() in a single line.
+
+        const items = ["pen"]
+        items.push("pencil","eraser")
+        console.log(items) */
+
+        /* 
+        //6.Remove 3 items using pop() inside a loop.
+
+        const nums = [1,2,3,4,5,6,7]
+        for(let i = 1;i<=3;i++){
+            nums.pop()
+        }
+        console.log(nums) */
+
+        /* 
+        //7. Add “Hello” at first & “World” at last.
+
+        const words = ["JavaScript", "Array"]
+        words.unshift("Hello")
+        words.push("World")
+        console.log(words) */
+
+        //map, filter, reduce:
+
+        /* 
+        //1.Use map() to double all numbers in an array.
+
+        const num = [2,4,6,8]
+        const double = num.map(function(num){
+            return num*2
+        })
+        console.log(double) */
+
+        /* 
+        //2.Use map() to convert all names to uppercase.
+
+        const names = ["hari","giri","suresh"]
+        const upnames = names.map(function(names){
+            return names.toUpperCase()
+        })
+        console.log(upnames) */
+
+        /* 
+        //3.Use filter() to keep only even numbers.
+
+        const numbers = [1,2,3,4,5,6,7,8,9,10]
+        const evennum = numbers.filter(function(names){
+            return names % 2 === 0
+        })
+        console.log(evennum) */
+
+        // Use filter() to keep only names with length > 4.
+
+        const name = ["hari","giri","hema","suresh","ramesh","ramu"]
+        const longname = name.filter(function(name){
+            return name.length > 4
+        })
+        console.log(longname)
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
