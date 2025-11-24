@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //reduce():
+
+        /* 
+        //Use reduce() to find the sum of [5, 10, 15, 20]
+
+        let num = [20,30,40,50,60]
+        let sum = num.reduce((total,value) => total + value , 0)
+
+        console.log(sum) */
+
+        /* 
+        // Convert array of words to single sentence using reduce.
+
+        let words = ["i","am","learning","javascript"]
+        let compe = words.reduce((total,word) => total + " " + word)
+        console.log(compe) */
+
+        //find(), some(), every():
+
+        //find():
+
+        /* 
+        //1.Find first odd number in [2, 4, 6, 7, 8]
+
+        let odd = [2,4,6,7,8,9]
+        let firstodd = odd.find( odd => odd % 2 !== 0)
+        console.log(firstodd) */
+
+        /* 
+        //2.Find the first student whose marks >= 90
+
+        let students = [23,52,55,98,35]
+        let marks = students.find(students => students >= 90)
+        console.log(marks) */
+
+        //some()
+
+        /* 
+        //1.Check if any user is "online" in ["offline","offline","online"]
+
+        let user = ["offline","online","outline"]
+
+        let sentence = user.some(words => words === "offline")
+        console.log(sentence) */
+
+        /* 
+        //2. Check if at least one number is divisible by 5.
+
+        let num = [21,24,46,25,13,12]
+        let divid = num.some(division => division % 5 === 0)     //true
+        console.log(divid) */
+
+        //every()
+        /* 
+        //1.Check if all students passed (>=35) from [45,60,75,20]
+
+        let marks = [36,45,65,77,8,89]
+        let passed = marks.every(m => m >=35)
+        console.log(passed) */            //false
+
+        /* 
+        //2. Check if all items are strings.
+
+        let item = ["banana","maango","apple"]
+        let itemstr = item.every(f =>  typeof f === "string" )
+        console.log(itemstr) */
+
+        //sort(), slice(), splice()
+
+        //sort()
+
+        /* 
+        //1.Sort product prices [1200,500,3000,1500] from low to high.
+
+        let prices = [1200,500,3000,1500]
+        console.log(prices.sort((a,b) => a-b)) */
+
+        /* 
+        //2.Sort words by length.
+
+        let words = ["cat","cow","apple","elephant"]
+        console.log(words.sort((a,b) => a.length - b.length)) */
+
+        /* 
+        //3.Sort students by age
+
+        let student = [
+            {name:"haribabu",age: 26},
+            {name: "giribabu",age: 27},
+            {name: "ramesh",age : 29}
+        
+        ]
+        console.log(student.sort((a,b) => a.age - b.age)) */
+
+        //slice
+
+        /* 
+        //1. Slice last 2 elements from array.
+
+        let num = [32,45,76,87,7,88] 
+        console.log(num.slice(-2))
+        console.log(num.slice(2)) */
+
+        /* 
+        //2.Slice items from index 2 to 6.
+
+        let item = [1,2,3,4,5,6,7,8,9]
+        console.log(item.slice(2,6)) */
+
+        //splice
+        /* 
+        //1.Remove 3 items starting index 2.
+
+        let a = [100,200,300,400,500]
+        console.log(a.splice(2,3)) */
+
+        /* 
+        //2. Replace 1 element with 2 elements
+
+        let color = ["red","green","purple","white"]
+        color.splice(2,4,"black","pink")
+        console.log(color) */
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
