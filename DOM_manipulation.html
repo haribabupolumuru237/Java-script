@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- document.getElementById: -->
+
+    <!-- 1.Select a paragraph by ID and change its text.   -->
+
+    <!-- <p id="num">this is paragraph</p>
+    <script>
+        document.getElementById("num").innerHTML = "this is new text"
+    </script> -->
+
+
+
+    <!-- 2.Select a button by ID and change its color. -->
+
+    <!-- <button id="bton">click me</button>
+    <script>
+        document.getElementById("bton").style.backgroundColor = "blue"
+    </script> -->
+
+
+    <!-- 3.Get a heading and convert text to uppercase -->
+
+    <!-- <h2 id="head"> hello dear</h2>
+    <script>
+        document.getElementById("head").innerHTML = "hello friend";
+        document.getElementById("head").innerHTML =
+        document.getElementById("head").innerHTML.toUpperCase();
+    </script> -->
+
+
+
+
+    <!-- 4.Select a box by ID and add a border -->
+
+    <!-- <div id="box" style="width: 200px; height: 200px; background: darkgreen;"> </div>
+
+    <script>
+        document.getElementById("box").style.border = "3px solid red";
+    </script> -->
+
+
+    <!-- querySelector & querySelectorAll :-->
+    <!-- querySelector -->
+    <!-- 1.Select the first <h2> and change its text. -->
+    <!-- 
+        
+    <h1>hello friend</h1>    
+    <h2>hello java script</h2>
+    <script>
+        document.querySelector("h2").innerHTML = "first heading"
+    </script> -->
+
+
+    <!-- 
+    2.Select an element by class .item and modify it -->
+
+        <!-- <p class="item">This is item One</p>
+        <p class="item">This is item Two</p>
+
+    <script>
+        document.querySelector(".item").style.color = "red";
+    </script> -->
+
+
+
+
+    <!-- 
+    3.Select an element using div > p selector -->
+
+    <!-- 
+    <div>
+        <p>Paragraph inside div</p>
+    </div>
+
+    <script>
+        document.querySelector("div > p").style.fontSize = "55px";
+    </script> -->
+
+
+    <!-- querySelectorAll -->
+
+    <!-- 4.Select all <li> items and color them blue -->
+    
+    <!-- 
+    <ul>
+        <li>apple</li>
+        <li>mango</li>
+        <li>banana</li>
+    </ul>    
+    <script>
+        let items = document.querySelectorAll("li")
+        items.forEach(li => li.style.color = "blue")
+
+    </script> -->
+
+
+
+    <!-- 5.Select all buttons and disable them -->
+
+    <!-- 
+    <button> submit</button>
+    <button> cancel</button>
+    <button> reset</button>
+
+    <script>
+        let btns = document.querySelectorAll("button")
+        btns.forEach(b=> b.disabled = true)
+        
+    </script> -->
+
+    <!-- Adding & Removing Elements -->
+
+    <!-- 1.Create a new <p> and add it to the body. -->
+    
+    <!-- 
+    <script>
+        let para = document.createElement("p")
+        para.innerText = "This is a new paragraph"
+        document.body.appendChild(para)
+    </script> --> 
+    
+    <!-- 2.Insert a new <li> into a list -->
+    <!-- 
+    <ul id="mylist">
+        <li>apple</li>
+        <li>banana</li>
+    </ul>
+
+    <script>
+        let item = document.createElement("li")
+        item.innerText = "mango"
+        document.getElementById("mylist").appendChild(item)
+    </script>
+     -->
+
+    <!-- 3.Add a new image dynamically -->
+    <!-- 
+    <script>
+        let img = document.createElement("img")
+        img.src = "c:\Users\p haribabu\Pictures\IMG_4812.JPG"
+        document.body.appendChild(img)
+    </script> -->
+
+
+    <!-- 4.Create a new button using JS -->
+
+    <!-- 
+    <script>
+        let btn = document.createElement("button")
+        btn.innerText = "click me"
+        document.body.appendChild(btn)
+    </script> -->
+
+    <!-- 5.Generate 10 boxes in a loop -->
+    <!-- 
+    <script>
+        for(let i = 0;i<10;i++){
+            let box = document.createElement("div")
+            box.innerText = "box"+ i
+            box.style.border = "2px solid green"
+            box.style.margin = "8px"
+            box.style.padding = "15px"
+            document.body.appendChild(box)
+        }
+    </script> -->
+
+    <!-- 6.Remove a specific list item  -->
+
+    <!-- 
+    <ul id="fruits">
+        <li id="removeme">orenge</li>
+    </ul>
+    <script>
+        document.getElementById("removeme")
+         document.getElementById("removeme").remove()
+    </script> -->
+
+    <!-- 7.Delete last child element -->
+
+    <!-- 
+    <div id="block">
+        <p>One</p>
+        <p>two</p>
+
+    </div>
+
+    <script>
+        let parent = document.getElementById("block")
+        parent.removeChild(parent.lastElementChild)
+    </script> -->
+
+
+
+
+    <!-- 8.Remove all children from a <div> -->
+
+    <!-- 
+    <div id="container">
+        <p>a</p>
+        <p>b</p>
+        <p>c</p>
+    </div>    
+    <script>
+        document.getElementById("container")
+        document.getElementById("container").innerHTML = ""
+    </script> -->
+
+    <!-- Changing Styles (style / classList): -->
+
+
+    <!-- 1.Change background color of a div -->
+
+    <!-- 
+    <div id="box" style="width: 200px; height: 100px; border: 5px solid blue;"></div>
+
+    <script>
+        document.getElementById("box").style.backgroundColor = "red"
+    </script> -->
+
+    <!-- 2.Change font size of a paragraph -->
+
+    <!-- 
+    <p id="text">hello everyone</p>
+    <script>
+        document.getElementById("text").style.fontSize = "55px"
+    </script> -->
+
+   
+
+
+
+
+
+
+
+
+
+
+    
+
+ 
+        
+
+
+
+
+</body>
+</html>
