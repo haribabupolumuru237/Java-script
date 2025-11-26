@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Window Object: 
+        
+        /* 
+        // 1. Print something using window.alert()
+
+        window.alert("hello my dear friend") */
+
+        /* 
+        //2.Print something using window.console.log()
+
+        window.console.log("this is webpage") */
+
+        /* 
+        //3.Check window width & height
+
+        console.log("window width",window.innerWidth)
+        console.log("window height",window.innerHeight) */
+
+        /* 
+        //4.Resize window & check changes
+
+        console.log("Updated Width:", window.innerWidth)
+        console.log("Updated Height:", window.innerHeight) */
+
+        /* 
+        //5.Use window.prompt() to ask user name
+        let name = window.prompt("enter your name")
+        console.log("hello "+ name + " welcome") */
+
+        /* 
+        //6.Use window.confirm()
+
+        let choice = window.confirm("do yu want to continue")
+        if(choice){
+            console.log("you selected yes")
+        }else{
+            console.log("you selected no")
+        } */
+        
+        /* 
+        //7. Access global variable as a window property
+
+        var city = "srikakulam"
+        console.log(window.city)
+        */
+
+        // Location Object
+
+        /* 
+        //1. Display current URL using location.href
+
+        console.log(location.href)     */ //http://127.0.0.1:5501/input/BOM.html
+
+        /* //2.Change URL using location.href = "https://google.com"
+
+        location.href = "https://google.com"   //google */
+    </script>
+       <!-- 
+        //3.Reload page using location.reload()
+
+        <h2> please dont touch</h2>
+        <button onclick="location.reload()">Reload Page</button> -->
+
+    <script>
+
+        /* 
+        //4. Print hostname using location.hostname
+
+        document.write(location + "<br>")
+        document.write(location.hostname) */
+
+        /* 
+        //5. Print protocol using location.protocol
+
+        document.write(location + "<br>")
+        document.write(location.protocol) */
+
+        /* 
+        //6.Print full details of location
+
+        document.write(location) */
+
+        /* 
+        //7. Use location.assign() to open a page
+
+        location.assign("https://www.youtube.com/watch?v=a3pMlnZMTVQ") */
+
+        /* 
+        //8. Print location.pathname
+
+        document.write(location.pathname) */
+        
+
+
+
+        /* // screen object:
+
+        // Print screen width using screen.width
+
+        document.write("Screen Width: " + screen.width + "px")
+
+        // Print screen height using screen.height
+
+        document.write("screen height: " + screen.height + "px")
+
+        //Print available height using screen.availHeight
+
+        document.write("screen available height: " + screen.availHeight + "px")
+
+        //Print color depth using screen.colorDepth
+
+        document.write("colour depth: " + screen.colorDepth + "bit")
+
+        // Print orientation using screen.orientation
+
+        document.write("orientation: " + screen.orientation.type) */
+
+        /* 
+        //Navigator Object:
+
+        //1. Print browser name using navigator.appName
+
+        document.write(navigator.appName)
+
+        //Print user agent using navigator.userAgent
+
+        document.write(navigator.userAgent + "<br>")
+
+        //Detect online/offline using navigator.onLine
+
+        if(navigator.onLine){
+            document.write("you are online")
+        }else{
+            document.write("you are offline")
+        }
+
+
+        //Detect platform (Win/Mac/Linux)
+
+        document.write("<br>" + navigator.platform)
+
+        //Detect device language
+
+        document.write(navigator.language)
+
+        //test CPU core count (speed hint) — navigator.hardwareConcurrency
+
+        document.write(navigator.hardwareConcurrency) */
+
+        //timers(setTimeout and setInterval)
+
+        /* 
+        //1.Print “Hello” after  4seconds
+
+        setTimeout(() => {
+            document.write("hello dear")
+        },4000) */
+
+        /* 
+        //2.Change text after 5 seconds
+
+        let msg = "hello  friend"
+        document.write(msg)
+        setTimeout(() => {
+            msg = "new text after 5 seconds"
+            document.write(msg)
+            let timer = setInterval(() => {
+            document.write("running slowly....",count)
+            count++
+            if(count>10){
+            clearInterval(timer)
+            document.write("...stopped...")}})
+        },5000) */
+
+        /* 
+        //3. Digital clock using setInterval
+
+        setInterval(() => {
+            let now = new Date().toLocaleTimeString()
+            document.write(now)
+        },4000) */
+
+        /* 
+        // 4. Stop an interval using clearInterval
+
+        let count = 1
+
+        let timer = setInterval(() => {
+            document.write("running slowly....",count)
+            count++
+            if(count>10){
+                clearInterval(timer)
+                document.write("...stopped...")
+            }
+        },3000) */
+
+        // LocalStorage & SessionStorage:
+
+        /* 
+        //1.Store a value in LocalStorage
+        
+        localStorage.setItem("username","Hari")
+        document.write("stored in username localstorege") */
+
+        /* 
+        //2.Retrieve a value from LocalStorage
+
+        let user = localStorage.getItem("username")
+        document.write(user)  //hari */
+
+        /* 
+        //3.Remove a value from LocalStorage
+
+        localStorage.removeItem("username")
+        document.write("remove from username localstoreage") */
+
+        /* 
+        // 4.Clear all LocalStorage
+
+        localStorage.clear()
+        document.write("all localstorege cleared") */
+
+        /* 
+        //5.Retrieve a value from SessionStorage
+
+        let name = sessionStorage.getItem("sessionname")
+        //console.log("name","hari")  //name: hari
+        console.log(name) //null */
+
+        /* 
+        //6.Remove a value from SessionStorage
+
+        sessionStorage.removeItem("sessionname")
+        document.write('removed session name from session storege') */
+
+        // 7.Clear all SessionStorage
+
+        sessionStorage.clear()
+        document.write("session strorege all cleared")
+        
+
+
+
+
+
+
+
+    </script>
+       
+
+
+
+
+
+    
+
+
+
+
+
+
+        
+
+
+
+
+
+
+    
+</body>
+</html>
