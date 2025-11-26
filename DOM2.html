@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Event Handling -->
+
+    <!-- 
+    1. Print "Button clicked" in console when button is clicked
+
+
+    
+    <button id="btn">click me</button>
+    <script>
+        document.getElementById("btn").addEventListener("click",function(){
+        console.log("button clicked")
+        })
+    </script> -->
+
+    <!-- 
+    2.Detect every key pressed using keyup and print the key
+
+    <input type="text" id="keyinput" placeholder="type somethig........">
+
+    <script>
+        document.getElementById("keyinput").addEventListener("keyup",function(event){
+            console.log("key passed", event.key)
+        })
+    </script> -->
+
+    <!-- 
+    3.On input change, show the text live inside a <p>.
+    
+        
+    <input type="text" id="live" placeholder="type here">
+    
+    <script>
+
+        document.getElementById("live").addEventListener("input",function(){
+            document.getElementById("output").textContent = this.value 
+        })
+    </script> -->
+
+    <!-- 
+    4.On mouseover, change element color
+
+    <div id="box" style="width: 100px; height: 100px; background: red;"></div>
+
+    <script>
+        document.getElementById("box").addEventListener("mouseover",function(){
+            this.style.background = "blue"
+        })
+    </script> -->
+    <!-- Event Listeners: -->
+
+
+    <!-- 
+    1. Add "click" listener to a button using addEventListener
+
+    <button id="btn">click me</button>
+    <script>
+        document.getElementById("btn").addEventListener("click",function(){
+            alert("button clicked")
+        })
+    </script> -->
+
+    <!-- 
+    2.Add "mouseover" listener to change background color
+
+    <div id="box" style="width: 120px; height: 120px; background: green; "></div>
+    <script>
+        document.getElementById("box").addEventListener("mouseover",function(){
+            this.style.background = "blue"
+        })
+    </script> -->
+
+    <!-- 
+    3.3. Add "keyup" listener to convert text to UPPERCASE automatically
+
+    <input type="text" id="textInput" placeholder="Type here">
+    <script>
+        document.getElementById("textInput").addEventListener("keyup", function () {
+        this.value = this.value.toUpperCase()
+        })
+    </script> -->
+
+
+
+
+
+</body>
+</html>
