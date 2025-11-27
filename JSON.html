@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JSON structure:
+
+        /*//1.Create a JSON object representing a student with name, age, class.
+
+        {
+            "name" : "haribabu",
+            "age" : 26,
+            "class" : "10th"
+        }
+
+
+
+        /* let student ={
+            "name" : "haribabu",
+            "age" : 26,
+            "class" : "10th"
+        }
+        console.log(student) */ 
+
+        /* 
+        //2.Create a JSON object for a product with price, stock, category.
+        {
+            "productName": "laptop",
+            "price": 55000,
+            "stock": 40,
+            "category": "electronics"
+        } */
+
+
+        /* 
+        //3. Create a JSON array of 5 employee names.
+
+        [
+            "ramesh",
+            "suresh",
+            "anita",
+            "hari",
+            "kiran"
+        ] */
+
+        /* 
+        //4. Create a JSON array of student objects (3 students).
+
+        [
+            { "name": "rahul", "age": 17 },
+            { "name": "rohit", "age": 18 },
+            { "name": "sneha", "age": 17 }
+        ] */
+
+        /* 
+        //5.Create a JSON object having nested objects
+
+        {
+            "name": "lava",
+            "age": 19,
+            "address":{
+                "city":"hyderbad",
+                "pincode":500001
+            }
+            
+        } */
+
+        /* 
+        //6.JSON object containing array (skills)
+
+        {
+            "name": "kumar",
+            "skills": ["JavaScript", "HTML", "CSS"]
+        } */
+
+        // JSON.stringify():
+
+        /* 
+        //1. Convert a JavaScript object into a JSON string.
+
+        const student = {
+            name: "haribabu",
+            age: 26,
+        }
+        const stinfo = JSON.stringify(student)
+        //document.write(stinfo)
+        console.log(stinfo) */
+
+        /* 
+        //2. Convert an array into JSON string.
+
+        const fruits = ["apple","banana","maango","orenge"]
+        console.log(JSON.stringify(fruits)) */
+
+        /* 
+        //3.Print both object and stringified version to see difference
+
+        let student = {
+            name: "haribabu",
+            age: 26
+        }
+        console.log(student)
+        console.log(JSON.stringify(student)) */
+
+        /* 
+        //4.Stringify with spacing/indentation
+
+        let details = {
+            name: "haribabu",
+            age: 26
+        }
+        console.log(JSON.stringify(details,null,6)) */
+
+        /* 
+        //5.Stringify using only selected keys
+        
+        const student = {name:"haribabu", age:26}
+        console.log(JSON.stringify(student,["name", "age"])) */
+
+        /* 
+        // 6.Stringify nested objects
+
+        const details = {
+            name: "haribabu",
+            address: {city: "srikakulam", pin: 532459 }
+        }
+        console.log(JSON.stringify(details)) */
+
+        //JSON.parse():
+
+        /* 
+        //1.Parse a valid JSON string into an object 
+
+        const student = `{"name": "haribabu","age": 26}`
+        const info = JSON.parse(student)
+        console.log(info) */
+
+        /* 
+        //2. Parse a JSON array string
+
+        const fruits = `["apple","mango","banana"]`
+        console.log(JSON.parse(fruits)) */
+
+        /* 
+        //3.Parse a nested JSON structure
+
+        const student = `{"name":"Ravi","address":{"city":"Hyderabad","pin":500001}}`
+        const data = JSON.parse(student)
+        console.log(data.address.city) */
+
+        /* 
+        //4.Parse and then access object properties
+
+        const json = `{"name":"Teja","marks":92}`
+        const student = JSON.parse(json)
+        console.log(student.name)
+        console.log(student.marks) */
+
+        // try...catch:
+        /* 
+        //1. Use try...catch to handle division by zero.
+
+        try{
+        let a = 10;b = 0
+        if(b === 0) throw new Error("cannot devide by zero")
+        console.log(a/b)
+        }catch(err){
+            console.log("error:",err.message)
+        } */
+
+        /* 
+        //2. Handle JSON.parse failure for invalid JSON.
+
+        try {
+            JSON.parse('{name:"Hari"}') 
+        } catch(err) {
+            console.log("JSON parse failed:", err.message)
+        } */
+
+       /* 
+        //3.Catch error for converting non-number to number.
+
+        try{
+            let value = Number("abc")
+            if (isNaN(value)) throw new Error("Conversion failed: Not a number")
+            console.log(value)
+        }catch(err){
+            console.log("Error:", err.message)
+        } */
+
+
+        /* 
+        //4.Catch undefined variable access
+
+        try{
+            console.log(x)
+        } catch(err){
+            console.log("error:",err.message)
+        } */
+
+        //Custom Errors:
+
+        /* 
+        //1.Throw custom error if age < 18.
+
+        try{
+            let age = 16
+            if(age < 18){
+                throw new Error("age are must be 18 or above")
+            }
+            console.log("access granted")
+        }catch(err){
+            console.log("error:" , err.message)
+        } */
+
+        /* 
+        //2.Throw custom error if password too short.
+
+        try{
+            let password = "123"
+
+            if(password.length < 6){
+                throw new Error("password must be at least 6 charactors")
+            }
+            console.log("password is strong")
+        }catch(err){
+            console.log("error:",err.message)
+        } */
+
+        /* 
+        //3.Throw custom error if number > 100.
+
+        try{
+            let num = 150
+            if(num > 100){
+                throw new Error("number should not exceed 100")
+            }
+            console.log("valid number")
+        }catch(err){
+            console.log("error:",err.message)
+        } */
+
+        //4.Throw custom error if array is empty
+
+        try {
+            let arr = [];
+            if (arr.length === 0){
+                throw new Error("Array cannot be empty")
+            }
+            console.log("Array has items")
+        } catch (err) {
+            console.log("Error:", err.message)
+        }
+
+
+
+
+    </script>
+</body>
+</html>
