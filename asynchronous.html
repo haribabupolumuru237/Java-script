@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // Callbacks:
+
+        /* 
+        //1. Write a function that accepts a callback and prints a message before and after executing the callback.
+
+        function runwithmsg(callback){                  //call back parameter added
+            console.log("before exicute call back")
+            callback()                                  //calling the call back function
+            console.log("after exicuting call back")
+        }
+
+        runwithmsg(()=>{
+            console.log("call mback function is running")
+        }) */
+
+        /* 
+        //2.Create a function that simulates downloading a file using callbacks.
+
+        function download(filename,callback){
+            console.log("starting download",filename)
+
+            setTimeout(()=>{
+                console.log("download complete",filename)
+                callback()
+            },4000)
+        }
+        download("movie name: salar-2",() => {
+            console.log("file saved successfully")
+        }) */
+
+
+        /* 
+        //3.Implement nested callbacks that simulate: Login → Fetch User Data → Show Dashboard.
+ 
+        function login(username,callback){
+            setTimeout(()=>{
+                console.log("user logged in ",username)
+                callback()
+            },3000)
+        }
+        function fecth(callback){
+            setTimeout(()=>{
+                console.log("user data fecthed")
+                callback()
+            },4000)
+        }
+        function dashboard(){
+            console.log("dashboard loading")
+        }
+
+        login("hari",()=>{
+            fecth(()=>{
+                dashboard()
+            })
+        }) */
+
+
+        // promises:
+
+        /* 
+        //1. Create a promise that resolves after 4 seconds.
+
+        let pro = new Promise((resolve)=>{
+            setTimeout(()=> resolve("promise resolved after 4 seconds"),4000);
+        });
+        pro.then(msg => console.log(msg)); */
+
+        /* 
+        //2.Create a promise that rejects if a number is negative.
+        
+        function check(num){
+            return new Promise((resolve,reject)=>{
+                if(num>=0)resolve("valid number:",num)
+                else reject('error: number is negitive')
+            });
+        };
+        check(6).then(console.log).catch(console.error)
+        check(-4).then(console.log).catch(console.error) */
+
+        /* 
+        //3.Chain promises to: Get number → Double it → Add 10 → Print result.
+
+        // let number = new Promise((resolve)=>resolve(10))
+
+        // number.then(num => num * 2)
+        // .then(result => result + 10)
+        // .then(finalresult => console.log("finalresult",finalresult))
+
+        let number = Promise.resolve(10)
+
+        number
+        .then(num =>{ 
+            console.log("orginalnum:",num)
+            return num * 2})
+        .then(result => {
+            console.log("double num:",result)
+            return result + 10}) 
+        .then(finalresult => {console.log("finalresult",finalresult)}) */
+
+        /* 
+        //4.Write a promise that rejects if a password is shorter than 6 characters.
+
+        function check(password){
+            return new Promise((resolve,reject) =>{
+                if(password.length >= 6) resolve("password is valid")
+                else reject("error: password too sort")
+            })
+        }
+        check("123455").then(console.log).catch(console.error)
+        check("234").then(console.log).catch(console.error) */
+
+        //Async / Await:
+
+        
+        /* 
+        //1.Write an async function that waits for two sequential delays: 1s then 3s.
+
+        function delay(ms){
+            return new Promise(resolve => setTimeout(resolve,ms))
+        }
+        async function sequentdelay() {
+            console.log("wait 1 second")
+            await delay(1000)
+            console.log("1 second passed")
+
+            console.log("wait 4 second")
+            await delay(4000)
+            console.log("4 second passed")
+            
+        }
+        sequentdelay() */
+
+        /* 
+        //2.Write async function that returns multiplication of two awaited values.
+
+        function number(num,ms){
+            return new Promise(resolve =>setTimeout(()=>resolve(num),ms))
+        }
+        async function multinum() {
+            let a = await number(5,2000)
+            let b = await number(6,4000)
+            return(a*b)
+        }
+        multinum().then(result => console.log("multification result",result)) */
+
+       /*  
+       //3.Write an async function that waits for 3 different promises one-by-one.
+
+        function delay(ms){
+            return new Promise(resolve => setTimeout(resolve, ms))
+        }
+        async function runSequential(){
+            console.log("Starting...")
+
+            await delay(1000)
+            console.log("1st task done (1 sec)")
+
+            await delay(2000)
+            console.log("2nd task done (2 sec)")
+
+            await delay(3000)
+            console.log("3rd task done (3 sec)")
+
+        }
+        runSequential() */
+
+        //4.async/await with try/catch
+
+        async function test(){
+            try{
+                throw new Error("Something failed")
+            }catch(e){
+                console.log("Error:", e.message)
+    
+            }
+        }
+        test()
+
+        
+        
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
