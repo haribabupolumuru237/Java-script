@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        
+        //Let & Const:
+        
+        //1.Declare a variable using let, update its value, and print it.
+
+        /* 
+        let name = "hari"
+        document.write(name + "<br>") //hari
+        name = "giri"
+        document.write(name)  //giri */
+
+        /* 
+        //2.Try reassigning a variable declared with const and observe the error.
+
+        const age = 26
+        console.log(age)   //26
+        age = 20
+        console.log(age)   //TypeError: Assignment to constant variable. */
+
+        /* 
+        //3.Create a const object and modify its properties.
+
+        const student = {
+            name: "haribabu",
+            age: 26,
+            address: "kotturu"
+        }
+        student.age = 24
+        student.college = "MR college"
+        console.log(student) */
+
+        /* 
+        //4.Use let inside a loop and print values.
+
+        for(let i = 0;i <= 5;i++){
+            console.log(i)     //0,1,2,3,4,5
+        } */
+
+        /* 
+        //5.Use const for an array and push items into it.
+
+        const num = [2,3,4,5]
+        num.push(7)
+        console.log(num)   //2,3,4,5,7 */
+
+        /* 
+        //6.Use const for a configuration object (e.g., API config).
+
+        const API_CONFIGERATION = {
+            baseURL: "https://www.jschallenger.com/",
+            timeout: 5000,
+            is_auth: false
+        }
+        console.log(API_CONFIGERATION)
+         */
+
+        //Arrow Functions:
+        
+        //1.Convert a normal function to an arrow function.
+
+        /* function name (){
+            return "wellcome to my dear hari"         //normal function
+            
+        }
+        console.log(name()) //wellcome to my dear hari   
+        
+        const name = ()=> "wellcome to my dear hari"    //arrow function
+        console.log(name())    //wellcome to my dear hari */
+
+        /* 
+        // 2.Write an arrow function that adds two numbers.
+
+        const num = (a,b) => a + b 
+        console.log(num(40,60))    //100 */
+
+        /* 
+        //3.Write an arrow function with no parameters.
+
+        const sayHi = () => "Hi there!"
+        console.log(sayHi())   //Hi there! */
+
+        /* 
+        //4.Use implicit return in an arrow function
+
+        const square = n => n * n
+        console.log(square(16))    //256  */ 
+        
+        /* 
+        //5.Return an object using parentheses with arrow function
+
+
+        const student = () => ({ name: "Hari", age: 20 });
+        console.log(student()); */
+
+        /* 
+        //6.Use arrow function inside setTimeout()
+
+        setTimeout(() => {
+            console.log("hello")
+        },3000)    //hello */
+
+        /* 
+        //7.Use arrow function inside forEach() loop
+
+        const colour = ["red", "blue","green", "orenge"]
+        colour.forEach(colour => console.log(colour)) */   //red,blue,green,orenge
+
+        //Template Literals:
+
+        /* 
+        //1.Print "Hello, your age is X" using template literal.
+
+        let age = 26
+        console.log(`hello your age is ${age}`) */  //hello your age is 26
+
+       /* 
+       //2.Insert variables inside a string using ${value}.
+
+        let name = "haribabu"
+        let city = "srikakulam"
+        console.log(`my name is ${name} i live in ${city}`)  */   //my name is haribabu i live in srikakulam
+
+        /* 
+        //3.Use template literals to format JSON data display
+
+        let user = {
+            name: "Hari",
+            age: 22,
+            city: "Bengaluru"
+        }
+        let info = `
+        User Details:
+        Name: ${user.name}
+        Age: ${user.age}
+        City: ${user.city}`
+
+        console.log(info) */
+
+        //Default Parameters:
+
+        /* 
+        //1.Make a function with a default parameter name = "Guest".
+
+        function names(name = "guest"){
+            console.log(`hello,${name}`)
+        }
+        names()               //hello,guest
+        names("lava")   */       // hello,lava
+
+        /* 
+        //2.Create a function with multiple default parameters
+
+        function user (name = "hari", age = 26, country = "india"){
+            console.log(name,age,country)
+        }
+        user()                             //hari 26 india
+        user("lava",20,"pakistan")  */        //lava 20 pakistan
+
+
+        /* 
+        //3.Use default values for numeric parameters
+
+        function adding(a = 10,b = 20){
+            console.log(a+b)
+        }
+        adding()   //30
+        adding(30)  //50
+        adding(5,10)  //15 */
+
+        /* 
+        //4.Function multiply(a, b = 1) and test
+
+        function multi(a,b = 2){
+            console.log(a*b)
+        }
+        multi(5)    //10
+        multi(3,6)  //18 */
+
+        //Spread & Rest Operators:
+
+        /* 
+        //1.Merge two arrays using spread.
+
+        const num1 = [1,2,3,4,5]
+        const num2 = [0,9,8,7,]
+        const merge = [...num1,...num2]
+        console.log(merge) */                  //1,2,3,4,5,0,9,8,7
+
+        /* 
+        //2.Copy an array using spread.
+
+        const number = [5,6,7,8,9,9,6]
+        const copy = [...number]
+
+        console.log(copy)  */          //5,6,7,8,9,9,6
+
+        /* 
+        //3.Copy an object using spread
+
+        let user = {
+            name: "haribabu",
+            age: 26,
+            address:"kotturu,srikakulam"
+        }
+        let copy = {...user}
+        console.log(copy) */
+
+        /* 
+        //4.Use rest parameters to accept many inputs
+
+        function show(...items){
+            console.log(items)
+        }
+        show(1,2,3,4,5,6,7,8,8) */
+
+        /* 
+        //5.Use spread to push all elements of one array into another
+
+        const a = [1,2,3,4]
+        const b = [9,8,7,6,3]
+        a.push(...b)
+        console.log(a) */
+
+        /* 
+        //6.Extract first item and collect rest items using rest
+
+        const colour = ["red","blue","green","yellow"]
+        const[first,...rest] = colour
+        console.log(first)          //red
+        console.log(...rest)        //blue,green,yellow */
+
+
+        //Destructuring (Array & Object):
+
+        //1.Destructure array into separate variables.
+
+        
+        
+
+        
+        
+
+        
+
+        
+
+
+        
+
+
+
+
+
+
+
+        
+        
+
+
+    </script>
+</body>
+</html>
