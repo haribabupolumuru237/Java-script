@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Destructuring (Array & Object):
+
+        /* 
+        //1.Destructure array into separate variables
+
+        let number = [10,20,30,40]
+        let [a,b,c] = number
+        console.log(a,b,c)  */         //10,20,30,40
+
+        /* 
+        //2.Destructure object into variables
+
+        const student ={name: "haribabu",age:26}
+        const {name,age} = student
+        console.log(name,age) */           //haribabu , 26
+
+        /* 
+        //3.Skip elements while destructuring arrays
+
+        let nums = [9,8,7,6,5,4]
+        let [first,,third] = nums
+        console.log(first,third)  */           //9,7
+
+        /* 
+        //4.Set default values during destructuring
+
+        let colour =["red"]
+        let [primary = "blue",secondary = "yellow"] =colour
+        console.log(primary,secondary) */      //red,
+        
+        /* 
+        //5.Rename variable while destructuring objects
+
+        let user = { username: "hari", score: 100 }
+        let { username: userName, score: points } = user
+        console.log(userName, points)       //hari , 100  */
+
+        /* 
+        //6.Destructure function return values
+
+        function value(){
+            return [5,10,15,20]
+        }
+        let [i,j,k,l]=value()
+        console.log(i,j,k,l)  */           //5,10,15,20
+
+        //Classes & Inheritance:
+
+        /* 
+        //1.Create a class Person with a constructor.
+
+        class person{
+            constructor(name,age){
+                this.name = name
+                this.age = age
+            }
+        }
+        let p1 = new person("haribabu",26)
+        console.log(p1) */
+
+        /* 
+        //2. Add a method to a class
+
+        class user{
+            constructor(name){
+                this.name = name
+            }
+            hello(){
+                console.log("hello i am " + this.name)
+            }
+        }
+        let details = new user("haribabu")
+        console.log(details)  //user {name:haribabu}
+        details.hello()  //hello i am haribabu */
+
+        /* 
+        //3.Create an object instance of a class
+
+        class car {
+            constructor(brand){
+                this.brand = brand
+            }
+        }
+        let mycar = new car("toyoto")
+        console.log(mycar)       //car {brand: 'toyoto'} */
+
+        /* 
+        //4.Create a subclass Student extending Person
+
+        class person{
+            constructor(name){
+                this.name = name
+            }
+        }
+        class student extends person{
+
+        }
+        let info = new student("giribabu")
+        console.log(info)       //student {name: 'giribabu'}
+        console.log(info.name)   //giribabu
+        */
+
+        /* 
+        //5.Use super() in subclass constructor
+
+        class person{
+            constructor(name,age){
+                this.name = name
+                this.age = age
+            }
+        }
+        class student extends person{
+            constructor(name,age,grade){
+                super(name,age)
+                this.grade = grade
+            }
+        }
+
+        let info = new student("haribabu",26,66.9)
+        console.log(info)     //student {name: 'haribabu', age: 26, grade: 66.9} */
+
+        /* 
+        //6.Create multiple instances from same class
+
+        class animal {
+            constructor(name){
+                this.name = name
+            }
+        }
+        let a1 = new animal("dog")
+        let a2 = new animal("cat")
+        let a3 = new animal("bull")
+
+        console.log(a1)
+        console.log(a2)
+        console.log(a3) */
+
+        // promises:
+
+        /* 
+        //1. Create a promise that resolves after 4 seconds.
+
+        let pro = new Promise((resolve)=>{
+            setTimeout(()=> resolve("promise resolved after 4 seconds"),4000);
+        });
+        pro.then(msg => console.log(msg)); */
+
+        /* 
+        //2.Create a promise that rejects if a number is negative.
+        
+        function check(num){
+            return new Promise((resolve,reject)=>{
+                if(num>=0)resolve("valid number:",num)
+                else reject('error: number is negitive')
+            });
+        };
+        check(6).then(console.log).catch(console.error)
+        check(-4).then(console.log).catch(console.error) */
+
+        /* 
+        //3.Chain promises to: Get number → Double it → Add 10 → Print result.
+
+        // let number = new Promise((resolve)=>resolve(10))
+
+        // number.then(num => num * 2)
+        // .then(result => result + 10)
+        // .then(finalresult => console.log("finalresult",finalresult))
+
+        let number = Promise.resolve(10)
+
+        number
+        .then(num =>{ 
+            console.log("orginalnum:",num)
+            return num * 2})
+        .then(result => {
+            console.log("double num:",result)
+            return result + 10}) 
+        .then(finalresult => {console.log("finalresult",finalresult)}) */
+
+        
+        //4.Write a promise that rejects if a password is shorter than 6 characters.
+
+        function check(password){
+            return new Promise((resolve,reject) =>{
+                if(password.length >= 6) resolve("password is valid")
+                else reject("error: password too sort")
+            })
+        }
+        check("123455").then(console.log).catch(console.error)
+        check("234").then(console.log).catch(console.error) 
+
+
+
+    </script>
+</body>
+</html>
